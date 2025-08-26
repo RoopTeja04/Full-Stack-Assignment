@@ -23,7 +23,9 @@ const Login = () => {
             const res = await api.post("/auth/login", UserLog);
             
             if(res.status === 200){
-                navigate("/exampaper")
+                localStorage.setItem("Logined", true);
+                localStorage.setItem("user", JSON.stringify(res.data.firstName));
+                navigate("/instructions")
             }
 
         }
@@ -75,4 +77,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;

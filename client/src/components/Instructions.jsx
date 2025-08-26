@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import api from '../apis/api'
 import { useNavigate } from 'react-router-dom';
 
-const ExamPage = () => {
+const InstructionsPage = () => {
 
     const [questions, setQuestions] = React.useState([]);
     const navigate = useNavigate();
@@ -61,4 +61,4 @@ const ExamPage = () => {
     )
 }
 
-export default ExamPage;
+export default InstructionsPage;
